@@ -5,21 +5,21 @@
  */
 
 // Modules
-import React from 'react'
-import { Outlet } from 'react-router'
+import type React from "react"
+import { Outlet } from "react-router-dom" // Changed import
 
 // Contexts
-import Authentication from '@core/contexts/Authentication'
-import Player from '@core/contexts/Player'
-import Theme from '@core/contexts/Theme'
+import Authentication from "@core/contexts/Authentication"
+import Player from "@core/contexts/Player"
+import Theme from "@core/contexts/Theme"
 
 // Components
-import Loading from '@component/Loading'
-import Snackbar from '@component/Snackbar'
-import Settings from '@component/Settings'
+import Loading from "@component/Loading"
+import Snackbar from "@component/Snackbar"
+import Settings from "@component/Settings"
 
 // Utilities
-import { ENABLE_SETTINGS } from '@core/constants'
+import { ENABLE_SETTINGS } from "@core/constants"
 
 const MainLayout: React.FC = () => {
   return (
@@ -39,5 +39,5 @@ const MainLayout: React.FC = () => {
   )
 }
 
-MainLayout.displayName = 'MainLayout'
+MainLayout.displayName = "MainLayout"
 export default MainLayout

@@ -5,12 +5,12 @@
  */
 
 // Modules
-import React from 'react'
-import { Outlet } from 'react-router'
+import type React from "react"
+import { Outlet } from "react-router-dom" // Changed import
 
 // Components
-import MainHeader from '@component/header/MainHeader'
-import MainFooter from '@component/footer/MainFooter'
+import MainHeader from "@component/header/MainHeader"
+import MainFooter from "@component/footer/MainFooter"
 
 const LandingLayout: React.FC = () => {
   return (
@@ -22,5 +22,5 @@ const LandingLayout: React.FC = () => {
   )
 }
 
-LandingLayout.displayName = 'LandingLayout'
+LandingLayout.displayName = "LandingLayout"
 export default LandingLayout

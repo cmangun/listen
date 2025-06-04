@@ -5,13 +5,13 @@
  */
 
 // Modules
-import React from 'react'
-import { Outlet } from 'react-router'
+import type React from "react"
+import { Outlet } from "react-router-dom" // Changed import
 
 // Components
-import MusicHeader from '@component/header/MusicHeader'
-import MusicFooter from '@component/footer/MusicFooter'
-import Sidebar from '@component/Sidebar'
+import MusicHeader from "@component/header/MusicHeader"
+import MusicFooter from "@component/footer/MusicFooter"
+import Sidebar from "@component/Sidebar"
 
 const MusicLayout: React.FC = () => {
   return (
@@ -20,17 +20,17 @@ const MusicLayout: React.FC = () => {
       <Sidebar />
 
       {/* Page content [[ Find at scss/framework/wrapper.scss ]] */}
-      <main id='page_content'>
+      <main id="page_content">
         <Outlet />
       </main>
 
       {/* Backdrop [[ Find at scss/framework/wrapper.scss ]] */}
-      <div id='backdrop'></div>
+      <div id="backdrop"></div>
 
       <MusicFooter />
     </>
   )
 }
 
-MusicLayout.displayName = 'MusicLayout'
+MusicLayout.displayName = "MusicLayout"
 export default MusicLayout

@@ -4,57 +4,57 @@
  */
 
 // Modules
-import { createBrowserRouter, RouterProvider } from 'react-router'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import { createBrowserRouter, RouterProvider } from "react-router-dom" // Changed import
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
 // Layouts
-import MainLayout from '@layout/MainLayout'
-import LandingLayout from '@layout/LandingLayout'
-import AuthLayout from '@layout/AuthLayout'
-import MusicLayout from '@layout/MusicLayout'
+import MainLayout from "@layout/MainLayout"
+import LandingLayout from "@layout/LandingLayout"
+import AuthLayout from "@layout/AuthLayout"
+import MusicLayout from "@layout/MusicLayout"
 
 // Components
-import Home from '@page/Home'
-import About from '@page/About'
-import Contact from '@page/Contact'
-import Blog from '@page/Blog'
-import NotFound from '@page/NotFound'
-import BlogPost from '@page/BlogPost'
-import Login from '@page/auth/Login'
-import Register from '@page/auth/Register'
-import Forgot from '@page/auth/Forgot'
-import Music from '@page/music'
-import Genres from '@page/music/Genres'
-import GenreDetails from '@page/music/GenreDetails'
-import Tracks from '@page/music/Tracks'
-import TrackDetails from '@page/music/TrackDetails'
-import Albums from '@page/music/Albums'
-import Artists from '@page/music/Artists'
-import ArtistDetails from '@page/music/ArtistDetails'
-import Stations from '@page/music/Stations'
-import Analytics from '@page/music/Analytics'
-import History from '@page/music/History'
-import Events from '@page/music/Events'
-import EventDetails from '@page/music/EventDetails'
-import CreateEvent from '@page/music/CreateEvent'
-import AddTrack from '@page/music/AddTrack'
-import Playlist from '@page/music/Playlist'
-import PlaylistDetails from '@page/music/PlaylistDetails'
-import Profile from '@page/music/Profile'
-import Favorites from '@page/music/Favorites'
-import Settings from '@page/music/Settings'
-import Plan from '@page/music/Plan'
+import Home from "@page/Home"
+import About from "@page/About"
+import Contact from "@page/Contact"
+import Blog from "@page/Blog"
+import NotFound from "@page/NotFound"
+import BlogPost from "@page/BlogPost"
+import Login from "@page/auth/Login"
+import Register from "@page/auth/Register"
+import Forgot from "@page/auth/Forgot"
+import Music from "@page/music"
+import Genres from "@page/music/Genres"
+import GenreDetails from "@page/music/GenreDetails"
+import Tracks from "@page/music/Tracks"
+import TrackDetails from "@page/music/TrackDetails"
+import Albums from "@page/music/Albums"
+import Artists from "@page/music/Artists"
+import ArtistDetails from "@page/music/ArtistDetails"
+import Stations from "@page/music/Stations"
+import Analytics from "@page/music/Analytics"
+import History from "@page/music/History"
+import Events from "@page/music/Events"
+import EventDetails from "@page/music/EventDetails"
+import CreateEvent from "@page/music/CreateEvent"
+import AddTrack from "@page/music/AddTrack"
+import Playlist from "@page/music/Playlist"
+import PlaylistDetails from "@page/music/PlaylistDetails"
+import Profile from "@page/music/Profile"
+import Favorites from "@page/music/Favorites"
+import Settings from "@page/music/Settings"
+import Plan from "@page/music/Plan"
 
 // Utilities
-import './core/i18n'
+import "./core/i18n"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <MainLayout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <LandingLayout />,
         children: [
           {
@@ -62,25 +62,25 @@ const router = createBrowserRouter([
             element: <Home />,
           },
           {
-            path: 'about',
+            path: "about",
             element: <About />,
           },
           {
-            path: 'contact',
+            path: "contact",
             element: <Contact />,
           },
           {
-            path: 'blog',
+            path: "blog",
             element: <Blog />,
           },
           {
-            path: 'blog/:id',
+            path: "blog/:id",
             element: <BlogPost />,
           },
         ],
       },
       {
-        path: '/auth',
+        path: "/auth",
         element: <AuthLayout />,
         children: [
           {
@@ -88,21 +88,21 @@ const router = createBrowserRouter([
             element: <Login />,
           },
           {
-            path: 'login',
+            path: "login",
             element: <Login />,
           },
           {
-            path: 'register',
+            path: "register",
             element: <Register />,
           },
           {
-            path: 'forgot',
+            path: "forgot",
             element: <Forgot />,
           },
         ],
       },
       {
-        path: '/music',
+        path: "/music",
         element: <MusicLayout />,
         children: [
           {
@@ -110,92 +110,92 @@ const router = createBrowserRouter([
             element: <Music />,
           },
           {
-            path: 'genres',
+            path: "genres",
             element: <Genres />,
           },
           {
-            path: 'genre/:id',
+            path: "genre/:id",
             element: <GenreDetails />,
           },
           {
-            path: 'tracks',
+            path: "tracks",
             element: <Tracks />,
           },
           {
-            path: 'track/:id',
+            path: "track/:id",
             element: <TrackDetails />,
           },
           {
-            path: 'albums',
+            path: "albums",
             element: <Albums />,
           },
           {
-            path: 'album/:id',
-            element: <Profile />,
+            path: "album/:id",
+            element: <Profile />, // Assuming this is correct as per original, might be AlbumDetails
           },
           {
-            path: 'artists',
+            path: "artists",
             element: <Artists />,
           },
           {
-            path: 'artist/:id',
+            path: "artist/:id",
             element: <ArtistDetails />,
           },
           {
-            path: 'stations',
+            path: "stations",
             element: <Stations />,
           },
           {
-            path: 'analytics',
+            path: "analytics",
             element: <Analytics />,
           },
           {
-            path: 'history',
+            path: "history",
             element: <History />,
           },
           {
-            path: 'events',
+            path: "events",
             element: <Events />,
           },
           {
-            path: 'event/:id',
+            path: "event/:id",
             element: <EventDetails />,
           },
           {
-            path: 'playlists',
+            path: "playlists",
             element: <Playlist />,
           },
           {
-            path: 'playlist/:id',
+            path: "playlist/:id",
             element: <PlaylistDetails />,
           },
           {
-            path: 'create-event',
+            path: "create-event",
             element: <CreateEvent />,
           },
           {
-            path: 'add-track',
+            path: "add-track",
             element: <AddTrack />,
           },
           {
-            path: 'profile',
+            path: "profile",
             element: <Profile />,
           },
           {
-            path: 'favorites',
+            path: "favorites",
             element: <Favorites />,
           },
           {
-            path: 'settings',
+            path: "settings",
             element: <Settings />,
           },
           {
-            path: 'plan',
+            path: "plan",
             element: <Plan />,
           },
         ],
       },
-      { path: '*', element: <NotFound /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ])

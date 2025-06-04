@@ -5,18 +5,18 @@
  */
 
 // Modules
-import React from 'react'
-import { Outlet } from 'react-router'
+import type React from "react"
+import { Outlet } from "react-router-dom" // Changed import
 
 const AuthLayout: React.FC = () => {
   return (
     // Auth [[ Find at scss/framework/auth.scss ]]
-    <div className='auth py-5'>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-xl-5 col-lg-7 col-md-9 col-sm-11 mx-auto'>
-            <div className='card'>
-              <div className='card-body p-sm-5'>
+    <div className="auth py-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-5 col-lg-7 col-md-9 col-sm-11 mx-auto">
+            <div className="card">
+              <div className="card-body p-sm-5">
                 <Outlet />
               </div>
             </div>
@@ -27,5 +27,5 @@ const AuthLayout: React.FC = () => {
   )
 }
 
-AuthLayout.displayName = 'AuthLayout'
+AuthLayout.displayName = "AuthLayout"
 export default AuthLayout
